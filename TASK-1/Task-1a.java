@@ -1,7 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 class CeaserCipher {
     static Scanner sc = new Scanner(System.in);

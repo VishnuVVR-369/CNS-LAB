@@ -1,11 +1,5 @@
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.KeyGenerator;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
+import java.security.*;
+import javax.crypto.*;
 
 class DESEncryptionDecryption {
     private static Cipher encryptCipher;
@@ -34,14 +28,14 @@ class DESEncryptionDecryption {
         }
     }
 
-    /**
-     * Encrypt Data
-     * 
-     * @param data
-     * @return
-     * @throws IllegalBlockSizeException
-     * @throws BadPaddingException
-     */
+    // /**
+    // * Encrypt Data
+    // *
+    // * @param data
+    // * @return
+    // * @throws IllegalBlockSizeException
+    // * @throws BadPaddingException
+    // */
     private static byte[] encryptData(String data)
             throws IllegalBlockSizeException, BadPaddingException {
         System.out.println("Data Before Encryption :" + data);
@@ -51,13 +45,13 @@ class DESEncryptionDecryption {
         return encryptedData;
     }
 
-    /**
-     * Decrypt Data
-     * 
-     * @param data
-     * @throws IllegalBlockSizeException
-     * @throws BadPaddingException
-     */
+    // /**
+    // * Decrypt Data
+    // *
+    // * @param data
+    // * @throws IllegalBlockSizeException
+    // * @throws BadPaddingException
+    // */
     private static void decryptData(byte[] data)
             throws IllegalBlockSizeException, BadPaddingException {
         byte[] textDecrypted = decryptCipher.doFinal(data);

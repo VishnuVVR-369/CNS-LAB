@@ -17,10 +17,13 @@ class BlowFish {
         BASE64Encoder encoder = new BASE64Encoder();
         byte iv[] = cipherOut.getIV();
         if (iv != null) {
-            System.out.println("Initialization Vector of the Cipher: " + encoder.encode(iv));
+            System.out.println("Initialization Vector of the Cipher: " +
+                    encoder.encode(iv));
         }
-        FileInputStream fin = new FileInputStream("D:/ISLABPrograms/inputFile.txt");
-        FileOutputStream fout = new FileOutputStream("D:/ISLABPrograms/outputFile.txt");
+        FileInputStream fin = new FileInputStream(
+                "C:\\Users\\pravin\\Desktop\\COLLEGE\\CNS-LAB\\TASK-3\\inputFile.txt");
+        FileOutputStream fout = new FileOutputStream(
+                "C:\\Users\\pravin\\Desktop\\COLLEGE\\CNS-LAB\\TASK-3\\outputFile.txt");
         CipherOutputStream cout = new CipherOutputStream(fout, cipherOut);
         int input = 0;
         while ((input = fin.read()) != -1) {

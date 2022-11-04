@@ -3,15 +3,13 @@ import java.io.*;
 class RCA4 {
     public static void main(String args[]) throws IOException {
         int temp = 0;
-        String ptext;
-        String key;
         int s[] = new int[256];
         int k[] = new int[256];
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("\n ENTER PLAIN TEXT\t");
-        ptext = in.readLine();
+        String ptext = in.readLine();
         System.out.println("\n\nENTER KEY TEXT\t\t");
-        key = in.readLine();
+        String key = in.readLine();
         char ptextc[] = ptext.toCharArray();
         char keyc[] = key.toCharArray();
         int cipher[] = new int[ptext.length()];

@@ -26,13 +26,13 @@ class AESEncryption {
         System.out.println("Descrypted Text:" + decryptedText);
     }
 
-    /**
-     * gets the AES encryption key. In your actual programs, this should be
-     * safely stored.
-     * 
-     * @return
-     * @throws Exception
-     */
+    // /**
+    // * gets the AES encryption key. In your actual programs, this should be
+    // * safely stored.
+    // *
+    // * @return
+    // * @throws Exception
+    // */
     public static SecretKey getSecretEncryptionKey() throws Exception {
         KeyGenerator generator = KeyGenerator.getInstance("AES");
         generator.init(128); // The AES key size in number of bits
@@ -41,14 +41,14 @@ class AESEncryption {
 
     }
 
-    /**
-     * Encrypts plainText in AES using the secret key
-     * 
-     * @param plainText
-     * @param secKey
-     * @return
-     * @throws Exception
-     */
+    // /**
+    // * Encrypts plainText in AES using the secret key
+    // *
+    // * @param plainText
+    // * @param secKey
+    // * @return
+    // * @throws Exception
+    // */
 
     public static byte[] encryptText(String plainText, SecretKey secKey) throws Exception {
         // AES defaults to AES/ECB/PKCS5Padding in Java 7
@@ -58,14 +58,14 @@ class AESEncryption {
         return byteCipherText;
     }
 
-    /**
-     * Decrypts encrypted byte array using the key used for encryption.
-     * 
-     * @param byteCipherText
-     * @param secKey
-     * @return
-     * @throws Exception
-     */
+    // /**
+    // * Decrypts encrypted byte array using the key used for encryption.
+    // *
+    // * @param byteCipherText
+    // * @param secKey
+    // * @return
+    // * @throws Exception
+    // */
     public static String decryptText(byte[] byteCipherText, SecretKey secKey) throws Exception {
         // AES defaults to AES/ECB/PKCS5Padding in Java 7
         Cipher aesCipher = Cipher.getInstance("AES");
